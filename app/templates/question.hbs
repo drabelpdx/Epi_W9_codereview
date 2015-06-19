@@ -1,3 +1,4 @@
+{{#link-to 'question.newanswer' this.id class="btn btn-success"}}Provide an answer{{/link-to}}
 <button class="btn btn-primary" {{action 'edit'}}>Edit this question</button>
 <button class="btn btn-danger" {{action 'delete'}}>Delete this question</button>
 
@@ -36,8 +37,14 @@
 
 {{/if}}
 
+<hr>
+<h3>Answers</h3>
 
+  {{#each answers as |answer|}}
 
+        <h4>{{answer.text}}<br><small class='muted'>{{answer.name}}</small></h4><br>
 
+  {{/each}}
 
   {{outlet}}
+  <!-- {{#link-to 'answer' answer.id}}{{/link-to}} -->

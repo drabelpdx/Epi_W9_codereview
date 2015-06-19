@@ -8,7 +8,9 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('questions', function() {
     this.route('new');
-    this.resource('question', {path: ':question_id'});
+    this.resource('question', {path: ':question_id'}, function() {
+      this.route('newanswer');
+    });
   });
 });
 
