@@ -1,5 +1,13 @@
+.everything {
+  background-color: lightgreen;
+}
+
 html, body {
     margin: 20px;
+}
+
+.navbar {
+  background-color: #EBEBFF;
 }
 
 nav .active {
@@ -8,4 +16,8 @@ nav .active {
 
 .muted {
   opacity: 0.5;
+}
+
+.col-md-4 {
+  background-color: #FDFDFF;
 }

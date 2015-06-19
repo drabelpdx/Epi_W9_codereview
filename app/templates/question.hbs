@@ -29,8 +29,8 @@
 
   <div class="row">
     <div class="col-md-8">
-      <h3>{{model.asked}}</h3><br>
-      <h4>Details: {{model.description}}</h4>
+      <h4>{{model.asked}}</h4>
+      <h5>Details: {{model.description}}</h5>
       <h5>Author:  {{model.author}}</h5>
     </div>
   </div>
@@ -38,13 +38,21 @@
 {{/if}}
 
 <hr>
-<h3>Answers</h3>
 
-  {{#each answers as |answer|}}
+  <table class='table'>
+    <thead>
+      <tr><th>Answers</th></tr>
+    </thead>
 
-        <h4>{{answer.text}}<br><small class='muted'>{{answer.date}}</small></h4><br>
-
-  {{/each}}
+    <tbody>
+      {{#each answer in answers}}
+        <tr>
+          <td>
+            {{answer.text}}<br><small class='muted'>{{answer.date}}</small>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 
   {{outlet}}
-  <!-- {{#link-to 'answer' answer.id}}{{/link-to}} -->

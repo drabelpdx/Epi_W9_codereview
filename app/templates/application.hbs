@@ -1,10 +1,11 @@
 <div class="container-fluid">
   <nav class='navbar navbar-default' role='navigation'>
-    <a class="navbar-brand" href="#">Q & A</a>
+    <a class="navbar-brand" href="#">{{current-date}}</a>
     <ul class='nav navbar-nav'>
       <li>{{#link-to 'questions'}}Questions{{/link-to}}</li>
       <li>{{#link-to 'questions.new'}}Add a Question{{/link-to}}</li>
     </ul>
+
   </nav>
 
   {{outlet}}

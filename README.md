@@ -3,6 +3,13 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## ** David's Notes **
+This is a Question and Answer Board app. The user may post, edit, and delete questions. Readers may post answers.
+
+Data storage:  The data will be persisted on a Firebase account.
+
+Known issue: When adding a new answer, two entries will appear. After refresh, only one will persist. Could not track down the cause.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -50,4 +57,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

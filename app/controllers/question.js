@@ -11,7 +11,6 @@ var QuestionController = {
     save: function() {
       this.set('isEditing', false);
       var asked = this.get('model');
-      // var question = this.get('controllers.question.model');
       asked.save();
     },
     delete: function() {

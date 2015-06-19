@@ -4,21 +4,20 @@ var NewAnswerController = {
   needs: ['question'],
   actions: {
     saveAnswer: function() {
-      var today = new Date;
-      var answer = this.store.createRecord('answer', {
+      var today = new Date();
+      var newAnswer = this.store.createRecord('answer', {
         text: this.get('text'),
         name: this.get('name'),
         date: today,
       });
-      answer.save();
+      newAnswer.save();
 
       var question = this.get('controllers.question.model');
-      question.get('answers').pushObject(answer);
+      question.get('answers').pushObject(newAnswer);
       question.save();
 
       this.setProperties({
-        text: '',
-        name: ''
+        text: ''
       });
 
       this.transitionToRoute('question', question.id);
