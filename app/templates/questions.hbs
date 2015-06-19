@@ -9,7 +9,7 @@
        {{#each question in model}}
          <tr>
            <td>
-             {{question.asked}} <small class='muted'>  by:  {{question.author}}</small>
+             {{#link-to 'question' question.id}}  {{question.asked}} <small class='muted'>  by:  {{question.author}} </small> {{/link-to}}
            </td>
          </tr>
        {{/each}}
@@ -23,5 +23,3 @@
 
  </div>
 </div>
-
-<!-- {{#link-to 'question' this}}{{/link-to}} -->
