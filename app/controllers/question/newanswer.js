@@ -4,10 +4,11 @@ var NewAnswerController = {
   needs: ['question'],
   actions: {
     saveAnswer: function() {
-      var controller = this;
+      var today = new Date;
       var answer = this.store.createRecord('answer', {
         text: this.get('text'),
-        name: this.get('name')
+        name: this.get('name'),
+        date: today,
       });
       answer.save();
 
