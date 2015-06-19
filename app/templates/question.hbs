@@ -1,6 +1,30 @@
+<button class="btn btn-primary" {{action 'edit'}}>Edit this question</button>
+<button class="btn btn-danger" {{action 'delete'}}>Delete this question</button>
 
 <br>
 <br>
+
+{{#if isEditing}}
+  <form>
+    <div class="form-group">
+      <label for="asked">Ask your question: </label>
+      {{textarea id="asked" class="form-control" rows="2" value=asked}}
+    </div>
+
+    <div class="form-group">
+      <label for="description">Provide more details: </label>
+      {{textarea id="description" class="form-control" rows="5" value=description}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Name: </label>
+      {{input id="author" class="form-control" value=author}}
+    </div>
+
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+
+{{else}}
 
   <div class="row">
     <div class="col-md-8">
@@ -10,6 +34,7 @@
     </div>
   </div>
 
+{{/if}}
 
 
 

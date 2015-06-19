@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+var NewQuestionController = {
+
   actions: {
     saveQuestion: function() {
       var newQuestion = this.store.createRecord('question', {
@@ -19,4 +20,6 @@ export default Ember.Controller.extend({
       this.transitionToRoute('questions');
     }
   }
-});
+};
+
+export default Ember.ObjectController.extend(NewQuestionController);
