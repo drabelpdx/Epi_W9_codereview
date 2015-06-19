@@ -1,0 +1,21 @@
+<h3>Add a new question</h3>
+
+<form>
+  <div class="form-group">
+    <label for="asked">Ask your question: </label>
+    {{textarea id="asked" class="form-control" rows="2" value=asked}}
+  </div>
+
+  <div class="form-group">
+    <label for="description">Provide more details: </label>
+    {{textarea id="description" class="form-control" rows="5" value=description}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Name: </label>
+    {{input id="author" class="form-control" value=author}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'saveQuestion'}}>Save</button>
+
+</form>
